@@ -1,8 +1,10 @@
+import "../styles/ResumeForm.css";
+
 function ResumeForm() {
   return (
-    <>
-      <h1>ResumeForm</h1>
-    </>
+    <div className="resume-form">
+      <h1>Resume Form</h1>
+    </div>
   );
 }
 
