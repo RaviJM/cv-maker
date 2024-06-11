@@ -1,5 +1,12 @@
 .resume-form {
   /* border: solid black; */
   width: 100%;
+  height: 100vh;
+  /* text-align: center; */
+  border-right: solid black;
+  border-right-width: 0.1px;
+}
+
+h1 {
   text-align: center;
 }
