@@ -10,7 +10,7 @@ function ResumeForm(props) {
   const [email, setEmail] = useState("ravi.mak2003@gmail.com");
   const [phoneNumber, setPhoneNumber] = useState("987654321");
 
-  const [schoolName, setSchoolName] = useState("K.D.A.R.F.S");
+  const [schoolName, setSchoolName] = useState("K.D.A.R.F.S.");
   const [titleOfStudy, setTitleOfStudy] = useState("12th");
   const [dateOfStudy, setDateOfStudy] = useState("2021-07-30");
 
