@@ -6,12 +6,15 @@ import { useState } from "react";
 function Container() {
   const [formData, setFormData] = useState({});
 
-  //   make a function that is passed to child and that calls setter function for while data (so that <Resume> updates! The function should be called upon submission of form so that Resume is only updated upon trigger)
+  // responsible for updating whole data for parent component (to rerender all its child components)
+  function handleSetData(data) {
+    setFormData(data);
+  }
 
   return (
     <div className="container">
-      <ResumeForm />
-      {/* <Resume /> */}
+      <ResumeForm onSetData={handleSetData} />
+      <Resume formData={formData} />
     </div>
   );
 }

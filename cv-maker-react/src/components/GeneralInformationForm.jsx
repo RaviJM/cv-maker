@@ -1,7 +1,20 @@
 function GeneralInformationForm(props) {
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#email").value;
+    let phoneNumber = document.querySelector("#phoneNumber").value;
+
+    let data = { name: name, email: email, phoneNumber: phoneNumber };
+
+    props.onSetData(data);
+
+    props.handleFormVisibility();
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <label htmlFor="name">Name: </label>
         <input
           id="name"
@@ -9,6 +22,7 @@ function GeneralInformationForm(props) {
           type="text"
           value={props.data.name}
           onChange={props.handleChange}
+          autoComplete="on"
         ></input>
         <br></br>
 
@@ -19,6 +33,7 @@ function GeneralInformationForm(props) {
           type="email"
           value={props.data.email}
           onChange={props.handleChange}
+          autoComplete="on"
         ></input>
         <br></br>
 
@@ -29,8 +44,11 @@ function GeneralInformationForm(props) {
           type="number"
           value={props.data.phoneNumber}
           onChange={props.handleChange}
+          autoComplete="on"
         ></input>
         <br></br>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
