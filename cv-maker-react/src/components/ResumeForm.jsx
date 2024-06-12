@@ -117,83 +117,82 @@ function ResumeForm(props) {
   return (
     <div className="resume-form">
       <h1>Resume Form</h1>
-      <br></br>
 
-      <div className="general-information-container section-container">
-        <div className="general-information-heading-container section-heading-container">
-          <h2>General Information</h2>
-          {!isGeneralFormVisible && (
-            <button
-              className="edit-button"
-              id="general-information-edit-button"
-              onClick={handleFormVisibility}
-            >
-              Edit
-            </button>
+      <div className="forms-container">
+        <div className="general-information-container section-container">
+          <div className="general-information-heading-container section-heading-container">
+            <h2>General Information</h2>
+            {!isGeneralFormVisible && (
+              <button
+                className="edit-button"
+                id="general-information-edit-button"
+                onClick={handleFormVisibility}
+              >
+                Edit
+              </button>
+            )}
+          </div>
+          {isGeneralFormVisible && (
+            <div className="general-information-form-container">
+              <GeneralInformationForm
+                data={data}
+                handleChange={handleChange}
+                onSetData={onSetData}
+                handleFormVisibility={handleFormVisibility}
+              />
+            </div>
           )}
         </div>
-        {isGeneralFormVisible && (
-          <div className="general-information-form-container">
-            <GeneralInformationForm
-              data={data}
-              handleChange={handleChange}
-              onSetData={onSetData}
-              handleFormVisibility={handleFormVisibility}
-            />
-          </div>
-        )}
-      </div>
-      <br></br>
 
-      <div className="education-information-container section-container">
-        <div className="education-information-heading-container section-heading-container">
-          <h2>Education Information</h2>
-          {!isEducationFormVisible && (
-            <button
-              className="edit-button"
-              id="education-information-edit-button"
-              onClick={handleFormVisibility}
-            >
-              Edit
-            </button>
+        <div className="education-information-container section-container">
+          <div className="education-information-heading-container section-heading-container">
+            <h2>Education Information</h2>
+            {!isEducationFormVisible && (
+              <button
+                className="edit-button"
+                id="education-information-edit-button"
+                onClick={handleFormVisibility}
+              >
+                Edit
+              </button>
+            )}
+          </div>
+          {isEducationFormVisible && (
+            <div className="education-information-form-container">
+              <EducationInformationForm
+                data={data}
+                handleChange={handleChange}
+                onSetData={onSetData}
+                handleFormVisibility={handleFormVisibility}
+              />
+            </div>
           )}
         </div>
-        {isEducationFormVisible && (
-          <div className="education-information-form-container">
-            <EducationInformationForm
-              data={data}
-              handleChange={handleChange}
-              onSetData={onSetData}
-              handleFormVisibility={handleFormVisibility}
-            />
-          </div>
-        )}
-      </div>
-      <br></br>
 
-      <div className="experience-information-container section-container">
-        <div className="experience-information-heading-container section-heading-container">
-          <h2>Experience Information</h2>
-          {!isExperienceFormVisible && (
-            <button
-              className="edit-button"
-              id="experience-information-edit-button"
-              onClick={handleFormVisibility}
-            >
-              Edit
-            </button>
+        <div className="experience-information-container section-container">
+          <div className="experience-information-heading-container section-heading-container">
+            <h2>Experience Information</h2>
+            {!isExperienceFormVisible && (
+              <button
+                className="edit-button"
+                id="experience-information-edit-button"
+                onClick={handleFormVisibility}
+              >
+                Edit
+              </button>
+            )}
+          </div>
+          {isExperienceFormVisible && (
+            <div className="experience-information-form-container">
+              <ExperienceInformationForm
+                data={data}
+                handleChange={handleChange}
+                onSetData={onSetData}
+                handleFormVisibility={handleFormVisibility}
+              />
+            </div>
           )}
         </div>
-        {isExperienceFormVisible && (
-          <div className="experience-information-form-container">
-            <ExperienceInformationForm
-              data={data}
-              handleChange={handleChange}
-              onSetData={onSetData}
-              handleFormVisibility={handleFormVisibility}
-            />
-          </div>
-        )}
       </div>
     </div>
   );

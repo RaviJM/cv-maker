@@ -80,7 +80,11 @@ function ExperienceInformationForm(props) {
         ></input>
         <br></br>
 
-        <button type="submit">Submit</button>
+        <div className="submit-button-container">
+          <button type="submit" className="section-submit-button">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
