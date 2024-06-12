@@ -7,8 +7,10 @@ function Container() {
   const [formData, setFormData] = useState({});
 
   // responsible for updating whole data for parent component (to rerender all its child components)
-  function handleSetData(data) {
-    setFormData(data);
+  function handleSetData(newData) {
+    let combinedNewData = { ...formData, ...newData };
+
+    setFormData(combinedNewData);
   }
 
   return (

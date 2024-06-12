@@ -9,7 +9,7 @@ function GeneralInformationForm(props) {
 
     props.onSetData(data);
 
-    props.handleFormVisibility();
+    props.handleFormVisibility("generalForm");
   }
 
   return (
